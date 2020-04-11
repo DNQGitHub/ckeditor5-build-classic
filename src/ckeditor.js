@@ -104,17 +104,15 @@ ClassicEditor.defaultConfig = {
 	image: {
 		toolbar: [
 			'imageStyle:alignLeft',
-			'imageStyle:alignRight',
 			'imageStyle:full',
-			'imageStyle:side',
+			'imageStyle:alignRight',
 			'|',
 			'imageTextAlternative'
 		],
 		styles: [
 			'alignLeft',
-			'alignRight',
 			'full',
-			'side'
+			'alignRight'
 		]
 	},
 	table: {
