@@ -20,6 +20,7 @@ import Image from '@ckeditor/ckeditor5-image/src/image';
 import ImageCaption from '@ckeditor/ckeditor5-image/src/imagecaption';
 import ImageStyle from '@ckeditor/ckeditor5-image/src/imagestyle';
 import ImageToolbar from '@ckeditor/ckeditor5-image/src/imagetoolbar';
+import ImageResize from '@ckeditor/ckeditor5-image/src/imageresize';
 import ImageUpload from '@ckeditor/ckeditor5-image/src/imageupload';
 import Indent from '@ckeditor/ckeditor5-indent/src/indent';
 import IndentBlock from '@ckeditor/ckeditor5-indent/src/indentblock';
@@ -52,6 +53,7 @@ ClassicEditor.builtinPlugins = [
 	ImageCaption,
 	ImageStyle,
 	ImageToolbar,
+	ImageResize,
 	ImageUpload,
 	Indent,
 	IndentBlock,
