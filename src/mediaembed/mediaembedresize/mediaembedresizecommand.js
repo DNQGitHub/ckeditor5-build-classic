@@ -1,10 +1,11 @@
 import Command from '@ckeditor/ckeditor5-core/src/command';
+import { isMediaEmbed } from '../utils';
 
 export default class MediaEmbedResizeCommand extends Command {
 	refresh() {
 		const element = this.editor.model.document.selection.getSelectedElement();
 
-		this.isEnabled = !true; // true for attempt, should to detect is media or not
+		this.isEnabled = isMediaEmbed( element );
 
 		if ( !element || !element.hasAttribute( 'width' ) ) {
 			this.value = null;
