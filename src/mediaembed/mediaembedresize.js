@@ -1,6 +1,6 @@
 import Plugin from '@ckeditor/ckeditor5-core/src/plugin';
 import WidgetResize from '@ckeditor/ckeditor5-widget/src/widgetresize';
-import MediaEmbedResizeCommand from './imageresizecommand';
+import MediaEmbedResizeCommand from './mediaembedresizecommand';
 
 import './theme/mediaembedresize.css';
 
