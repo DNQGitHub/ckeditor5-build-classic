@@ -21,7 +21,7 @@ export default class MediaEmbedStyleEditing extends Plugin {
 		const styles = normalizeMediaEmbedStyles( editor.config.get( 'mediaEmbed.styles' ) );
 
 		// Allow mediaEmbedStyle attribute in media.
-		schema.extend( 'media', { allowAttributes: 'mediaEmbedStyle' } );
+		schema.extend( 'media', { allowAttributes: [ 'mediaEmbedStyle', 'width' ] } );
 
 		// Converters for mediaEmbedStyle attribute from model to view.
 		const modelToViewConverter = modelToViewStyleAttribute( styles );
