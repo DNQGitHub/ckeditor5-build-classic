@@ -8,13 +8,13 @@
 	/*
 	The `<figure>` element for resized images must not use `display:table` as browsers do not support `max-width` for it well.
 	See https://stackoverflow.com/questions/4019604/chrome-safari-ignoring-max-width-in-table/14420691#14420691 for more.
-	Fortunately, since we control the width, there is no risk that the image will look bad.
+	Fortunately, since we control the width, there is no risk that the media embed will look bad.
 	*/
 	display: block;
 	box-sizing: border-box;
 
 	& .ck-media__wrapper {
-		/* For resized images it is the `<figure>` element that determines the image width. */
+		/* For resized images it is the `<figure>` element that determines the media embed width. */
 		width: 100%;
 	}
 }
