@@ -41,10 +41,8 @@ export default class MediaEmbedResize extends Plugin {
 					},
 					// TODO consider other positions.
 					isCentered() {
-						// const imageStyle = data.item.getAttribute( 'imageStyle' );
-
-						// return !imageStyle || imageStyle == 'full' || imageStyle == 'alignCenter';
-						return false;
+						const mediaEmbedStyle = data.item.getAttribute( 'mediaEmbedStyle' );
+						return !mediaEmbedStyle || mediaEmbedStyle == 'full' || mediaEmbedStyle == 'alignCenter';
 					},
 
 					onCommit( newValue ) {
