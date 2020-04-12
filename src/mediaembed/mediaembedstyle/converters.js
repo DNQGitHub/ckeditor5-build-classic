@@ -19,6 +19,10 @@ export function modelToViewStyleAttribute( styles ) {
 
 		if ( newStyle ) {
 			viewWriter.addClass( newStyle.className, viewElement );
+
+			if ( newStyle.name === 'full' && viewElement.hasStyle( 'width' ) ) {
+				viewWriter.removeStyle( 'width', viewElement );
+			}
 		}
 	};
 }
