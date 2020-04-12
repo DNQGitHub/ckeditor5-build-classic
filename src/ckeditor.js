@@ -34,6 +34,7 @@ import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformation';
 import TextAlignment from '@ckeditor/ckeditor5-alignment/src/alignment';
 import Base64UploadAdapter from '@ckeditor/ckeditor5-upload/src/adapters/base64uploadadapter';
+import Font from '@ckeditor/ckeditor5-font/src/font';
 
 // -- my plugins
 // import InsertImageUrl from './plugins/image/insertImageUrl';
@@ -77,6 +78,7 @@ ClassicEditor.builtinPlugins = [
 	TextTransformation,
 	TextAlignment,
 	Base64UploadAdapter,
+	Font,
 
 	// -- insert image url
 	// InsertImageUrl,
@@ -95,30 +97,21 @@ ClassicEditor.defaultConfig = {
 		items: [
 			'heading',
 			'|',
-			'bold',
-			'italic',
-			'underline',
-			'link',
+			'fontSize', 'fontFamily', 'fontColor', 'fontBackgroundColor',
 			'|',
-			'alignment:left',
-			'alignment:center',
-			'alignment:right',
-			'alignment:justify',
+			'bold', 'italic', 'underline', 'link',
 			'|',
-			'indent',
-			'outdent',
+			'alignment:left', 'alignment:center', 'alignment:right', 'alignment:justify',
 			'|',
-			'bulletedList',
-			'numberedList',
+			'indent', 'outdent',
 			'|',
-			'blockQuote',
-			'insertTable',
+			'bulletedList', 'numberedList',
 			'|',
-			'undo',
-			'redo',
+			'blockQuote', 'insertTable',
 			'|',
-			'imageUpload',
-			'mediaEmbed'
+			'undo', 'redo',
+			'|',
+			'imageUpload', 'mediaEmbed'
 
 			// -- insert image url
 			// 'insertImageUrl'
