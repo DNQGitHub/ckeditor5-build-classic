@@ -40,11 +40,11 @@ export default class MediaEmbedStyleCommand extends Command {
 		const mediaEmbedElement = model.document.selection.getSelectedElement();
 
 		model.change( writer => {
-			if ( this.styles[ styleName ].isDefault ) {
-				writer.removeAttribute( 'mediaEmbedStyle', mediaEmbedElement );
-			} else {
-				writer.setAttribute( 'mediaEmbedStyle', styleName, mediaEmbedElement );
-			}
+			// if ( this.styles[ styleName ].isDefault ) {
+			// 	writer.removeAttribute( 'mediaEmbedStyle', mediaEmbedElement );
+			// } else {
+			writer.setAttribute( 'mediaEmbedStyle', styleName, mediaEmbedElement );
+			// }
 		} );
 	}
 }
