@@ -35,6 +35,16 @@ import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformatio
 import TextAlignment from '@ckeditor/ckeditor5-alignment/src/alignment';
 import Base64UploadAdapter from '@ckeditor/ckeditor5-upload/src/adapters/base64uploadadapter';
 
+// -- my plugins
+import InsertImageUrl from './plugins/image/insertImageUrl';
+
+// -- media embed resize
+import MediaEmbedResize from './mediaembed/mediaembedresize';
+
+// -- media embed style
+import MediaEmbedStyle from './mediaembed/mediaembedstyle';
+import MediaEmbedToolbar from './mediaembed/mediaembedtoolbar';
+
 export default class ClassicEditor extends ClassicEditorBase {}
 
 // Plugins to include in the build.
@@ -66,7 +76,17 @@ ClassicEditor.builtinPlugins = [
 	TableToolbar,
 	TextTransformation,
 	TextAlignment,
-	Base64UploadAdapter
+	Base64UploadAdapter,
+
+	// -- insert image url
+	InsertImageUrl,
+
+	// -- media embed resize
+	MediaEmbedResize,
+
+	// -- media embed style
+	MediaEmbedStyle,
+	MediaEmbedToolbar
 ];
 
 // Editor configuration.
@@ -98,21 +118,40 @@ ClassicEditor.defaultConfig = {
 			'redo',
 			'|',
 			'imageUpload',
-			'mediaEmbed'
+			'mediaEmbed',
+
+			// -- insert image url
+			'insertImageUrl'
+
 		]
 	},
 	image: {
 		toolbar: [
 			'imageStyle:alignLeft',
-			'imageStyle:full',
+			'imageStyle:alignCenter',
 			'imageStyle:alignRight',
 			'|',
 			'imageTextAlternative'
 		],
 		styles: [
 			'alignLeft',
-			'full',
+			'alignCenter',
 			'alignRight'
+		]
+	},
+	mediaEmbed: {
+		toolbar: [
+			'mediaEmbedStyle:alignLeft',
+			'mediaEmbedStyle:alignCenter',
+			'mediaEmbedStyle:alignRight',
+			'|',
+			'mediaEmbedStyle:full'
+		],
+		styles: [
+			'alignLeft',
+			'alignCenter',
+			'alignRight',
+			'full'
 		]
 	},
 	table: {
