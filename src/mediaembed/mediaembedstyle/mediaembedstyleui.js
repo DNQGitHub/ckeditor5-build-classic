@@ -1,5 +1,6 @@
 import Plugin from '@ckeditor/ckeditor5-core/src/plugin';
 import ButtonView from '@ckeditor/ckeditor5-ui/src/button/buttonview';
+import { add } from '@ckeditor/ckeditor5-utils/src/translation-service';
 
 import { normalizeMediaEmbedStyles } from './utils';
 
@@ -14,15 +15,16 @@ export default class MediaEmbedStyleUI extends Plugin {
 		const t = this.editor.t;
 
 		return {
-			'Full size media embed': t( 'Full size  media embed' ),
-			'Side  media embed': t( 'Side  media embed' ),
-			'Left aligned  media embed': t( 'Left aligned  media embed' ),
-			'Centered  media embed': t( 'Centered  media embed' ),
-			'Right aligned  media embed': t( 'Right aligned  media embed' )
+			'Full size media embed': t( 'Full size media embed' ),
+			'Side media embed': t( 'Side media embed' ),
+			'Left aligned media embed': t( 'Left aligned media embed' ),
+			'Centered media embed': t( 'Centered media embed' ),
+			'Right aligned media embed': t( 'Right aligned media embed' )
 		};
 	}
 
 	init() {
+		this._addTranslations();
 		const editor = this.editor;
 		const configuredStyles = editor.config.get( 'mediaEmbed.styles' );
 
@@ -59,6 +61,11 @@ export default class MediaEmbedStyleUI extends Plugin {
 
 			return view;
 		} );
+	}
+
+	_addTranslations() {
+		// eslint-disable-next-line no-undef
+		add( 'vi', require( './translation/vi' ) );
 	}
 }
 
