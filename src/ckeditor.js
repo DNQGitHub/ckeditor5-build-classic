@@ -36,7 +36,7 @@ import TextAlignment from '@ckeditor/ckeditor5-alignment/src/alignment';
 import Base64UploadAdapter from '@ckeditor/ckeditor5-upload/src/adapters/base64uploadadapter';
 
 // -- my plugins
-import InsertImageUrl from './plugins/image/insertImageUrl';
+// import InsertImageUrl from './plugins/image/insertImageUrl';
 
 // -- media embed resize
 import MediaEmbedResize from './mediaembed/mediaembedresize';
@@ -79,7 +79,7 @@ ClassicEditor.builtinPlugins = [
 	Base64UploadAdapter,
 
 	// -- insert image url
-	InsertImageUrl,
+	// InsertImageUrl,
 
 	// -- media embed resize
 	MediaEmbedResize,
@@ -118,10 +118,10 @@ ClassicEditor.defaultConfig = {
 			'redo',
 			'|',
 			'imageUpload',
-			'mediaEmbed',
+			'mediaEmbed'
 
 			// -- insert image url
-			'insertImageUrl'
+			// 'insertImageUrl'
 
 		]
 	},
