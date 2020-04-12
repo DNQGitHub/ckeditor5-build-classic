@@ -1,6 +1,6 @@
 import Plugin from '@ckeditor/ckeditor5-core/src/plugin';
 import WidgetResize from '@ckeditor/ckeditor5-widget/src/widgetresize';
-import MediaEmbedResizeCommand from './mediaembedresizecommand';
+import MediaEmbedResizeCommand from './mediaembedresize/mediaembedresizecommand';
 
 import './theme/mediaembedresize.css';
 
@@ -28,7 +28,7 @@ export default class MediaEmbedResize extends Plugin {
 			const resizer = editor.plugins
 				.get( WidgetResize )
 				.attachTo( {
-					unit: editor.config.get( 'media.resizeUnit' ) || '%',
+					unit: editor.config.get( 'mediaEmbed.resizeUnit' ) || '%',
 					modelElement: data.item,
 					viewElement: widget,
 					editor,
